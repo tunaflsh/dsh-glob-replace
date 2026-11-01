@@ -1,0 +1,11 @@
+# dsh-glob-replace bundle layer.
+#
+# Inserts the plugin row into a DSH profile. The row module exports
+# { name, inject, apply } and registers the `glob_replace` tool on the
+# harness tool registry (ctx.tools).
+#
+# Install into a profile:
+#   dsh plugin --profile <name> add /absolute/path/to/glob-replace
+- insert:
+    - id: glob-replace
+      name: dsh-glob-replace

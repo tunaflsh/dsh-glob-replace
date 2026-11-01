@@ -1,0 +1,47 @@
+{
+  "name": "dsh-glob-replace",
+  "version": "0.3.0",
+  "description": "Glob-scoped search and replace for DeepSeek Harness: one call rewrites every file matching a path glob, applying changes through ctx.fs (read-before-write, sandbox, per-file diffs) with literal or regex matching, dry-run and bounded results.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "glob",
+    "replace",
+    "search-replace",
+    "bulk-edit"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-tool",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
