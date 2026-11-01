@@ -77,3 +77,7 @@ node --test test/
 
 The tests cover glob compilation, literal and regex replacement, dry-run,
 exclusion, truncation, and diff hunks against a temporary file tree.
+
+## Work-in-Progress
+
+- [ ] Clean up slop.
