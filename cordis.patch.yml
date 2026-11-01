@@ -5,7 +5,8 @@
 # harness tool registry (ctx.tools).
 #
 # Install into a profile:
-#   dsh plugin --profile <name> add /absolute/path/to/glob-replace
+#   dsh plugin --profile <name> add github:tunaflsh/dsh-glob-replace
+#   dsh plugin --profile <name> add /absolute/path/to/dsh-glob-replace  # local dev
 - insert:
     - id: glob-replace
       name: dsh-glob-replace

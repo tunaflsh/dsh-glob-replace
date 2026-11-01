@@ -55,17 +55,24 @@ comments, import paths, and code in languages without a language server.
 
 ## Install
 
-From a local checkout:
+From the repository:
 
 ```sh
-dsh plugin --profile <name> add /absolute/path/to/glob-replace
+dsh plugin --profile <name> add github:tunaflsh/dsh-glob-replace
 ```
 
-In the Desktop app, install the same absolute path through the plugin manager
-(Settings → Plugins). The profile records a `link:` dependency and adds
-`dsh-glob-replace` to `dsh.profile.bundles`, so the tool appears in new
-sessions. Because the module is linked, a code edit is picked up after a
-bundle reload (disable/enable the plugin) or an app restart — no reinstall.
+In the Desktop app, install `github:tunaflsh/dsh-glob-replace` through the
+plugin manager (Settings → Plugins). This records a git dependency and adds
+`dsh-glob-replace` to `dsh.profile.bundles`.
+
+For development, install a local checkout instead:
+
+```sh
+dsh plugin --profile <name> add /absolute/path/to/dsh-glob-replace
+```
+
+A local install records a `link:` dependency, so a code edit is picked up after
+a bundle reload (disable/enable the plugin) or an app restart — no reinstall.
 Client bundles are fetched when the page boots, so after changing `client.js`
 refresh the Web UI once; the host tool needs only the bundle reload.
 
